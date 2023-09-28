@@ -1,18 +1,26 @@
 {
-  "name": "@yurychang/eslint-config",
-  "version": "0.0.1",
-  "license": "MIT",
-  "author": "Yury Chang",
-  "description": "shared ESLint configs",
-  "main": "./eslint-config.js",
-  "publishConfig": {
-    "access": "public"
-  },
-  "scripts": {
-    "publish": "npm publish"
-  },
-  "peerDependencies": {
-    "eslint": "*",
-    "eslint-config-standard": "*"
-  }
+    "name": "@yurychang/eslint-config",
+    "version": "0.0.1",
+    "license": "MIT",
+    "author": "Yury Chang",
+    "description": "shared ESLint configs",
+    "main": "./eslint-config.js",
+    "keywords": [
+        "eslint",
+        "eslint-config"
+    ],
+    "publishConfig": {
+        "access": "public"
+    },
+    "scripts": {
+        "publish": "npm publish"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/yurychang/linter-config"
+    },
+    "peerDependencies": {
+        "eslint": "*",
+        "eslint-config-standard": "*"
+    }
 }

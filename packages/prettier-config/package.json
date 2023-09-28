@@ -5,8 +5,16 @@
     "author": "Yury Chang",
     "description": "shared Prettier config",
     "main": "./prettier-config.json",
+    "keywords": [
+        "prettier",
+        "prettier-config"
+    ],
     "publishConfig": {
         "access": "public"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/yurychang/linter-config"
     },
     "scripts": {
         "publish": "npm publish"
