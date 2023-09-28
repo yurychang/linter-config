@@ -5,6 +5,9 @@
     "author": "Yury Chang",
     "description": "shared Prettier config",
     "main": "./prettier-config.json",
+    "publishConfig": {
+        "access": "public"
+    },
     "scripts": {
         "publish": "npm publish"
     },

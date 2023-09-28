@@ -5,6 +5,9 @@
   "author": "Yury Chang",
   "description": "shared ESLint configs",
   "main": "./eslint-config.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "publish": "npm publish"
   },
