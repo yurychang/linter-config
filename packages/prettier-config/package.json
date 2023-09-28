@@ -1,0 +1,14 @@
+{
+    "name": "@yurychang/prettier-config",
+    "version": "0.0.1",
+    "license": "MIT",
+    "author": "Yury Chang",
+    "description": "shared Prettier config",
+    "main": "./prettier-config.json",
+    "scripts": {
+        "publish": "npm publish"
+    },
+    "peerDependencies": {
+        "prettier": "*"
+    }
+}
