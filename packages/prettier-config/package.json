@@ -1,22 +1,22 @@
 {
-    "name": "@yurychang/prettier-config",
-    "version": "0.0.1",
-    "license": "MIT",
-    "author": "Yury Chang",
-    "description": "shared Prettier config",
-    "main": "./index.json",
-    "keywords": [
-        "prettier",
-        "prettier-config"
-    ],
-    "publishConfig": {
-        "access": "public"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/yurychang/linter-config"
-    },
-    "peerDependencies": {
-        "prettier": "*"
-    }
+  "name": "@yurychang/prettier-config",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": "Yury Chang",
+  "description": "shared Prettier config",
+  "main": "./index.json",
+  "keywords": [
+    "prettier",
+    "prettier-config"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yurychang/linter-config"
+  },
+  "peerDependencies": {
+    "prettier": "*"
+  }
 }

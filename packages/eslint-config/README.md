@@ -16,6 +16,6 @@ Create a `.eslintrc.js` file in project root with the following content:
 
 ```js
 module.exports = {
-  extends: ["@yurychang"],
+  extends: ['@yurychang'],
 };
 ```
