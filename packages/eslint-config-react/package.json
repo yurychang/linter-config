@@ -20,6 +20,7 @@
   "peerDependencies": {
     "@yurychang/eslint-config": "*",
     "eslint-plugin-react": "*",
-    "eslint-plugin-react-hooks": "*"
+    "eslint-plugin-react-hooks": "*",
+    "eslint-plugin-react-refresh": "*"
   }
 }

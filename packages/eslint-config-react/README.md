@@ -5,7 +5,7 @@
 1. Install this package and peer dependencies
 
 ```sh
-$ npm i -D @yurychang/eslint-config-react @yurychang/eslint-config eslint-plugin-react-hooks eslint
+$ npm i -D @yurychang/eslint-config-react @yurychang/eslint-config eslint-plugin-react-hooks eslint-plugin-react-refresh eslint
 ```
 
 2. Use ESLint config in your project
