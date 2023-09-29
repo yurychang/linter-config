@@ -5,7 +5,7 @@
   ],
   "scripts": {
     "publish-eslint-config": "npm publish --workspace @yurychang/eslint-config",
-    "publish-eslint-config-react": "npm publish --workspace @yurychang/eslint-config",
+    "publish-eslint-config-react": "npm publish --workspace @yurychang/eslint-config-react",
     "publish-eslint-config-typescript": "npm publish --workspace @yurychang/eslint-config-typescript",
     "publish-prettier-config": "npm publish --workspace @yurychang/prettier-config"
   },
