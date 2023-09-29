@@ -1,0 +1,24 @@
+{
+  "name": "@yurychang/eslint-config-react",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": "Yury Chang",
+  "description": "shared ESLint configs for react",
+  "main": "./index.js",
+  "keywords": [
+    "eslint",
+    "eslint-config",
+    "react"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yurychang/linter-config"
+  },
+  "peerDependencies": {
+    "@yurychang/eslint-config": "*",
+    "eslint-plugin-react": "*"
+  }
+}

@@ -1,10 +1,11 @@
 {
-    "description": "Shared ESLint and Prettier config",
-    "workspaces": [
-        "packages/*"
-    ],
-    "scripts": {
-        "publish-eslint-config": "npm publish --workspace @yurychang/eslint-config",
-        "publish-prettier-config": "npm publish --workspace @yurychang/prettier-config"
-    }
+  "description": "Shared ESLint and Prettier config",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "publish-eslint-config": "npm publish --workspace @yurychang/eslint-config",
+    "publish-eslint-config-react": "npm publish --workspace @yurychang/eslint-config",
+    "publish-prettier-config": "npm publish --workspace @yurychang/prettier-config"
+  }
 }
