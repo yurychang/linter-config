@@ -4,7 +4,7 @@
     "license": "MIT",
     "author": "Yury Chang",
     "description": "shared Prettier config",
-    "main": "./prettier-config.json",
+    "main": "./index.json",
     "keywords": [
         "prettier",
         "prettier-config"

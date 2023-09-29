@@ -3,7 +3,7 @@ module.exports = {
     es2021: true,
   },
   parserOptions: {
-    ecmaVersion: 'latest',
+    ecmaVersion: "latest",
   },
-  extends: ['standard'],
+  extends: ["standard"],
 };

@@ -4,7 +4,7 @@
     "license": "MIT",
     "author": "Yury Chang",
     "description": "shared ESLint configs",
-    "main": "./eslint-config.js",
+    "main": "./index.js",
     "keywords": [
         "eslint",
         "eslint-config"
@@ -17,7 +17,7 @@
         "url": "https://github.com/yurychang/linter-config"
     },
     "peerDependencies": {
-        "eslint": "*",
+        "eslint": ">=0.8.0",
         "eslint-config-standard": "*"
     }
 }
