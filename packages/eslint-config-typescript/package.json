@@ -1,0 +1,26 @@
+{
+  "name": "@yurychang/eslint-config-typescript",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": "Yury Chang",
+  "description": "shared ESLint configs for typescript",
+  "main": "./index.js",
+  "keywords": [
+    "eslint",
+    "eslint-config",
+    "typescript"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yurychang/linter-config"
+  },
+  "peerDependencies": {
+    "@yurychang/eslint-config": "*",
+    "@typescript-eslint/parser": "*",
+    "@typescript-eslint/eslint-plugin": "*",
+    "typescript": "*"
+  }
+}
