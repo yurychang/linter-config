@@ -1,6 +1,6 @@
 {
   "name": "@yurychang/eslint-config-react",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "license": "MIT",
   "author": "Yury Chang",
   "description": "shared ESLint configs for react",
