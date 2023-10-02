@@ -1,5 +1,5 @@
 #!/bin/bash
-commit_regex=\[eslint-config\] Release v[0-9]\.[0-9]\.[0-9]
+commit_regex=\[eslint-config\] v[0-9]\.[0-9]\.[0-9]
 if [[ $commit_message =~ $commit_regex ]]
 then
   release_version=${commit_message:24}
