@@ -28,7 +28,7 @@ jobs:
         run: echo $release_version
         env: 
           release_version: ${{ env.release_version }}
-      # - run: npm run publish-eslint-config
-      #   env:
-      #     NODE_AUTH_TOKEN: ${{secrets.npm_token}
+      - run: npm run publish-eslint-config
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.eslint_config_npm_token}
 
