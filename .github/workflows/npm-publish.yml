@@ -19,7 +19,7 @@ jobs:
           node-version: 18
           registry-url: https://registry.npmjs.org/
       - name: Make the script files executable
-        run: chmod +x my-script.sh
+        run: chmod +x get-release-version.sh
       - name: Get release version
         run: ./get-release-version.sh
         env:
