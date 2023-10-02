@@ -6,3 +6,4 @@ then
   echo "release_version=$release_version" >> "$GITHUB_ENV"
 else
   echo "::error incorrect version of commit message"
+fi
