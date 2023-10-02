@@ -1,3 +1,3 @@
 #!/bin/bash
-echo "COMMIT_MESSAGE=github.event.head_commit.mesasge" >> "$GITHUB_ENV"
-printf "$COMMIT_MESSAGE"
+echo "commit_message=${{github.event.head_commit.mesasge}}" >> "$GITHUB_ENV"
+printf "env.${{commit_message}}"
