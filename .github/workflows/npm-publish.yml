@@ -10,7 +10,7 @@ on:
 
 jobs:
   publish-npm:
-    if: "contains(github.event.head_commit.message, '[@yurychang/eslint-config] v')"
+    if: "contains(github.event.head_commit.message, '[eslint-config] v')"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
