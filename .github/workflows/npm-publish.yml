@@ -23,4 +23,8 @@ jobs:
       #    NODE_AUTH_TOKEN: ${{secrets.npm_token}}
       - name: Create annotation for build error
         run: echo "::error file=app.js,line=1::Missing semicolon"
+      - name: Make the script files executable
+        run: chmod +x my-script.sh
+      - name: Run the scripts
+        run: ./my-script.sh
 
