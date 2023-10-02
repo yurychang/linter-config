@@ -24,6 +24,8 @@ jobs:
         run: ./get-release-version.sh
         env:
           COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
+      - name: print
+        run: echo $release_version
       # - run: npm run publish-eslint-config
       #   env:
       #     NODE_AUTH_TOKEN: ${{secrets.npm_token}
