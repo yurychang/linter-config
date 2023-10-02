@@ -1,4 +1,6 @@
 #!/bin/bash
-echo "version=github.event.head_commit.message" >> "$GITHUB_ENV"
-printf "$COMMIT_MESSAGE"
-printf "$version"
+commit_regex=\[eslint-config\] Release v[0-9]\.[0-9]\.[0-9]
+if [[ $commit_message =~ $commit_regex ]]
+then
+  release_version=${commit_message:24}
+  echo "release_version=$release_version" >> "$GITHUB_ENV"
