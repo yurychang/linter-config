@@ -39,11 +39,6 @@ jobs:
         env:
           PACKAGE: ${{ inputs.PACKAGE }}
           CHANGING_TYPE: ${{ inputs.CHANGING_TYPE }}
-        
-      - name: Commit & Push changes
-        run: git remote set-url origin https://x-access-token:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY
-        env:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
           
       - name: Push changes to repo
         run: |
