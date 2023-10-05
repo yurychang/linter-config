@@ -34,17 +34,15 @@ jobs:
           node-version: 18
           registry-url: https://registry.npmjs.org/
       
-      - name: Increase version
-        run: npm version $CHANGING_TYPE -m "[$PACKAGE] Release %s" --workspace $PACKAGE
-        env:
-          PACKAGE: ${{ inputs.PACKAGE }}
-          CHANGING_TYPE: ${{ inputs.CHANGING_TYPE }}
-          
-      - name: Push changes to repo
+      - name: Increase version & Push
         run: |
+          npm version $CHANGING_TYPE -m "[$PACKAGE] Release %s" --workspace $PACKAGE
           git config user.name github-actions
           git config user.email github-actions@github.com
           git push
+        env:
+          PACKAGE: ${{ inputs.PACKAGE }}
+          CHANGING_TYPE: ${{ inputs.CHANGING_TYPE }}
         
       - name: Publish package to npm
         run: npm publish --workspace $PACKAGE --dry-run
