@@ -26,7 +26,6 @@ on:
 
 jobs:
   publish-npm:
-    if: "contains(github.event.head_commit.message, '[eslint-config] v')"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -34,16 +33,7 @@ jobs:
         with:
           node-version: 18
           registry-url: https://registry.npmjs.org/
-      - name: Make the script files executable
-        run: chmod +x get-release-version.sh
-      - name: Get release version
-        run: ./get-release-version.sh
-        env:
-          commit_message: ${{ github.event.head_commit.message }}
-      - name: print
-        run: echo $release_version
-        env: 
-          release_version: ${{ env.release_version }}
+      - run: npm version $CHANGING_TYPE
       - run: npm publish --workspace $PACKAGE --dry-run
         env:
-          NODE_AUTH_TOKEN: ${{secrets.eslint_config_npm_token}}
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
