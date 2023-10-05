@@ -46,6 +46,9 @@ jobs:
           
       - name: Increase version
         run: npm version $CHANGING_TYPE -m "[$PACKAGE] Release %s" --workspace $PACKAGE
+        env:
+          PACKAGE: ${{ inputs.PACKAGE }}
+          CHANGING_TYPE: ${{ inputs.CHANGING_TYPE }}
         
       - name: Commit & Push changes
         uses: actions-js/push@master
