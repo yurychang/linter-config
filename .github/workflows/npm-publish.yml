@@ -4,9 +4,6 @@
 name: Node.js Package
 
 on:
-  push:
-    branches:
-      - test
   workflow_dispatch:
     inputs:
       package:
