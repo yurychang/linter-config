@@ -33,7 +33,21 @@ jobs:
         with:
           node-version: 18
           registry-url: https://registry.npmjs.org/
-      - run: npm version $CHANGING_TYPE
-      - run: npm publish --workspace $PACKAGE --dry-run
+          
+      - name: Git configuration
+        run: |
+          git config --global user.email "GitHub Actions"
+          git config --global user.name "GitHub Actions"
+          
+      - name: Increase version
+        run: npm version $CHANGING_TYPE -m "[$PACKAGE] Release %s"
+        
+      - name: Push change to repo
+        run: git push origin && git push --tags
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        
+      - name: Publish package to npm
+        run: npm publish --workspace $PACKAGE --dry-run
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
