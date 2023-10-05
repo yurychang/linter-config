@@ -9,12 +9,6 @@ on:
       package:
         description: 'target package'
         required: true
-        type: choice
-        options:
-        - \@yurychang/eslint-config
-        - \@yurychang/eslint-config-react
-        - \@yurychang/eslint-config-typescript
-        - \@yurychang/prettier-config
 
 jobs:
   publish-npm:
