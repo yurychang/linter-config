@@ -36,11 +36,11 @@ jobs:
       
       - name: Increase version & Push
         run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
           version=$(npm version $CHANGING_TYPE --workspace $PACKAGE | head -n 2| tail -1 | cut -d# -f2)
           git add .
           git commit -m "[$PACKAGE] $version"
-          git config user.name github-actions
-          git config user.email github-actions@github.com
           git push
         env:
           PACKAGE: ${{ inputs.PACKAGE }}
