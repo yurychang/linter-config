@@ -28,31 +28,31 @@ jobs:
   publish-npm:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
         with:
           node-version: 18
           registry-url: https://registry.npmjs.org/
-          
-      # - name: Git configuration
-      #   run: |
-      #     git config --global user.email "GitHub Actions"
-      #     git config --global user.name "GitHub Actions"
       
-      - uses: actions/checkout@master
-        with:
-          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
-          fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
-          
       - name: Increase version
         run: npm version $CHANGING_TYPE -m "[$PACKAGE] Release %s" --workspace $PACKAGE
+        env:
+          PACKAGE: ${{ inputs.PACKAGE }}
+          CHANGING_TYPE: ${{ inputs.CHANGING_TYPE }}
         
       - name: Commit & Push changes
-        uses: actions-js/push@master
-        with:
+        run: git remote set-url origin https://x-access-token:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY
+        env:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Push changes to repo
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git push
         
       - name: Publish package to npm
         run: npm publish --workspace $PACKAGE --dry-run
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          PACKAGE: ${{ inputs.PACKAGE }}
