@@ -1,6 +1,6 @@
 {
   "name": "@yurychang/eslint-config-typescript",
-  "version": "0.2.0",
+  "version": "0.1.0",
   "license": "MIT",
   "author": "Yury Chang",
   "description": "shared ESLint configs for typescript",
