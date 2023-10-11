@@ -11,18 +11,18 @@ on:
         required: true
         type: choice
         options:
-        - "@yurychang/eslint-config"
-        - "@yurychang/eslint-config-react"
-        - "@yurychang/eslint-config-typescript"
-        - "@yurychang/prettier-config"
+          - '@yurychang/eslint-config'
+          - '@yurychang/eslint-config-react'
+          - '@yurychang/eslint-config-typescript'
+          - '@yurychang/prettier-config'
       changing_type:
         description: 'type of version to increase'
         required: true
         type: choice
         options:
-        - patch
-        - minor
-        - major
+          - patch
+          - minor
+          - major
 
 jobs:
   publish-npm:
@@ -33,7 +33,7 @@ jobs:
         with:
           node-version: 18
           registry-url: https://registry.npmjs.org/
-      
+
       - name: Increase version & Push
         run: |
           git config user.name github-actions
@@ -45,9 +45,9 @@ jobs:
         env:
           PACKAGE: ${{ inputs.PACKAGE }}
           CHANGING_TYPE: ${{ inputs.CHANGING_TYPE }}
-        
+
       - name: Publish package to npm
-        run: npm publish --workspace $PACKAGE --dry-run
+        run: npm publish --workspace $PACKAGE
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
           PACKAGE: ${{ inputs.PACKAGE }}
