@@ -47,7 +47,9 @@ jobs:
           CHANGING_TYPE: ${{ inputs.CHANGING_TYPE }}
 
       - name: Publish package to npm
-        run: npm publish --workspace $PACKAGE
+        run: |
+          echo "//registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN" >> ~/.npmrc
+          npm publish --workspace $PACKAGE
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
           PACKAGE: ${{ inputs.PACKAGE }}
