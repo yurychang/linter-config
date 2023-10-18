@@ -1,5 +1,4 @@
 module.exports = {
-  extends: ['@yurychang'],
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint'],
   parserOptions: {
@@ -17,6 +16,7 @@ module.exports = {
         '@typescript-eslint/no-unsafe-assignment': 'warn',
         '@typescript-eslint/no-explicit-any': 'warn',
         '@typescript-eslint/no-unsafe-member-access': 'warn',
+        '@typescript-eslint/no-floating-promises': 'off',
       },
     },
   ],
