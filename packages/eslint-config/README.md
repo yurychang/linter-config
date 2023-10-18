@@ -7,7 +7,7 @@ Shared [ESLint](https://eslint.org/) configuration.
 1. Install this package and peer dependencies
 
 ```sh
-$ npm i -D @yurychang/eslint-config eslint
+$ npm i -D @yurychang/eslint-config eslint eslint-config-standard eslint-plugin-promise eslint-plugin-import eslint-plugin-n
 ```
 
 2. Use ESLint config in your project
